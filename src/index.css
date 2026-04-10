@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Lora", serif;
+  --font-header: "Cinzel", serif;
+}
+
+body {
+  font-family: var(--font-serif);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+}
+
+/* Texture overlay for that parchment/ancient feel */
+.parchment-texture {
+  position: relative;
+}
+
+.parchment-texture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-leather.png');
+  opacity: 0.05;
+  pointer-events: none;
+}
+
